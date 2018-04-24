@@ -1,0 +1,2 @@
+# Sales
+A Simple POS
