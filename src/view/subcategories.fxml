@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" cache="true" cacheHint="QUALITY" depthTest="ENABLE" prefHeight="546.0" prefWidth="773.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Subcategories">
+   <children>
+      <AnchorPane layoutX="14.0" layoutY="7.0" prefHeight="73.0" prefWidth="752.0" style="-fx-background-color: #FFF; -fx-border-radius: 4px; -fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0 ,0.15), 6.0, 0.7, 0.0,1.5); -fx-padding: 8px; -fx-background-radius: 5px;">
+         <children>
+            <Label fx:id="categoryname" layoutX="54.0" layoutY="28.0" prefHeight="25.0" prefWidth="104.0" text="Luxury Soap">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <MaterialDesignIconView fill="#21b061" glyphName="FORWARD" layoutX="167.0" layoutY="47.0" size="18.0" wrappingWidth="26.999986469745636" />
+            <Label fx:id="subcategoryname" layoutX="202.0" layoutY="28.0" prefHeight="25.0" prefWidth="117.0" text="Select Type ">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="salesAnchor" layoutX="11.0" layoutY="89.0" prefHeight="507.0" prefWidth="762.0" style="-fx-background-color: #D1D6CF; -fx-border-color: #3C8DBC; -fx-background-radius: 3; -fx-border-width: 1 1 1 1; -fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.15), 6.0, 0.7, 0.0,1.5); -fx-padding: 4;">
+         <children>
+            <ScrollPane fx:id="scrollFx" layoutX="10.0" layoutY="10.0" prefHeight="497.0" prefWidth="762.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="-5.0" AnchorPane.topAnchor="5.0">
+               <content>
+                  <TilePane fx:id="tilepanefx" prefHeight="497.0" prefWidth="762.0" />
+               </content>
+            </ScrollPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

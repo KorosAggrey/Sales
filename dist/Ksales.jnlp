@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="Ksales.jnlp">
+  <information>
+    <title>Ksales</title>
+    <vendor>user1</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="Ksales.jar" size="230579" download="eager" />
+    <jar href="lib\TrayTester.jar" size="52070" download="eager" />
+    <jar href="lib\controlsfx-8.40.12.jar" size="996389" download="eager" />
+    <jar href="lib\fontawesome-8-9.jar" size="571068" download="eager" />
+    <jar href="lib\fontawesomefx-8.0.10.jar" size="108930" download="eager" />
+    <jar href="lib\fontawesomefx-8.0.8.jar" size="118727" download="eager" />
+    <jar href="lib\jasperreports-5.6.0.jar" size="4968538" download="eager" />
+    <jar href="lib\jfoenix.jar" size="2185083" download="eager" />
+    <jar href="lib\mysql-connector-java-5.1.23-bin.jar" size="834126" download="eager" />
+    <jar href="lib\openjfx-dialogs-1.0.2.jar" size="148557" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="Ksales" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="Main.Signin"  name="Ksales" />
+  <update check="always"/>
+</jnlp>

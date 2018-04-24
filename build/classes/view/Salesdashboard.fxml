@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Sales">
+   <children>
+      <Pane layoutX="-1.0" layoutY="1.0" prefHeight="73.0" prefWidth="1300.0" style="-fx-background-color: #6EBBE9; -fx-border-radius: 2px;">
+         <children>
+            <Circle fill="#d3cece" layoutX="1144.0" layoutY="37.0" radius="26.0" stroke="BLACK" strokeType="INSIDE" />
+            <FontAwesomeIconView fx:id="avatar" fill="#3c3838" glyphName="USER" layoutX="1128.0" layoutY="50.0" size="40.0" />
+            <Label fx:id="adminname" layoutX="1188.0" layoutY="24.0" prefHeight="22.0" prefWidth="109.0" style="-fx-lpadding: 8px;" text="John Doe" textFill="#f5f4f4">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <FontAwesomeIconView fill="#fcfcfc" glyphName="BELL" layoutX="1039.0" layoutY="57.0" size="30.0" text="" />
+            <Label fx:id="notifications" layoutX="1069.0" layoutY="13.0" style="-fx-alignment: center; -fx-background-color: #DD4B39; -fx-text-fill: white; -fx-background-radius: 6; -fx-font-weight: bold; -fx-label-padding: 3px;" text="30" />
+            <FontAwesomeIconView fill="WHITE" glyphName="CAR" layoutX="969.0" layoutY="56.0" size="30.0" />
+            <Label fx:id="alerts" layoutX="1003.0" layoutY="13.0" style="-fx-alignment: center; -fx-background-color: #00A65A; -fx-text-fill: white; -fx-background-radius: 6; -fx-font-weight: bold; -fx-label-padding: 3px;" text="40" />
+            <Label layoutX="213.0" layoutY="27.0" text="Dashboard" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <ImageView fx:id="logo" fitHeight="73.0" fitWidth="203.0" layoutX="2.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../src/logo.png" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="9.0" layoutY="87.0" prefHeight="73.0" prefWidth="921.0" style="-fx-background-color: #FFF; -fx-border-radius: 4px; -fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0 ,0.15), 6.0, 0.7, 0.0,1.5); -fx-padding: 8px; -fx-background-radius: 5px;">
+         <children>
+            <Pane layoutX="11.0" layoutY="13.0" prefHeight="41.0" prefWidth="44.0" style="-fx-background-color: #489EE7; -fx-border-radius: 2px;">
+               <children>
+                  <FontAwesomeIconView fill="WHITE" glyphName="SEARCH" layoutX="12.0" layoutY="28.0" size="25.0" wrappingWidth="19.99998089671135" />
+               </children>
+            </Pane>
+            <TextField fx:id="barcode" layoutX="55.0" layoutY="13.0" onKeyTyped="#searchitem" prefHeight="41.0" prefWidth="532.0" promptText="Enter item name or scan Barcode">
+               <font>
+                  <Font name="Roboto Medium" size="14.0" />
+               </font>
+            </TextField>
+            <JFXButton fx:id="search" buttonType="RAISED" layoutX="587.0" layoutY="13.0" onAction="#SaleB" prefHeight="41.0" prefWidth="85.0" style="-fx-border-color: #AADD5E; -fx-background-radius: 4px; -fx-border-radius: 1px;" text="Sale" textFill="#aadd5e">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="#aadd5e" glyphName="EDIT" size="23.0" wrappingWidth="27.0" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="grid" buttonType="RAISED" layoutX="674.0" layoutY="13.0" onAction="#Grid" prefHeight="41.0" prefWidth="150.0" style="-fx-border-color: #AADD5E; -fx-background-radius: 4px; -fx-border-radius: 1px; -fx-background-color: #489EE7;" text="Show Grid" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="#bcdcf9" glyphName="FILE" size="23.0" wrappingWidth="27.0" />
+               </graphic>
+            </JFXButton>
+         </children></AnchorPane>
+      <AnchorPane layoutX="946.0" layoutY="74.0" prefHeight="606.0" prefWidth="354.0" style="-fx-background-color: #020305;">
+         <children>
+            <AnchorPane layoutX="4.0" layoutY="14.0" prefHeight="163.0" prefWidth="345.0" style="-fx-background-color: #FFF; -fx-border-radius: 4px; -fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0 ,0.15), 6.0, 0.7, 0.0,1.5); -fx-padding: 8px; -fx-background-radius: 5px;">
+               <children>
+                  <JFXButton fx:id="user_details" layoutX="15.0" layoutY="23.0" prefHeight="31.0" prefWidth="38.0" style="-fx-border-color: #D7DCE5; -fx-background-radius: 4px; -fx-border-radius: 4px; -fx-background-color: #F9FBFC;" text=" ..." textFill="#9398a0" />
+                  <AnchorPane layoutX="16.0" layoutY="68.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="73.0" prefWidth="318.0" style="-fx-background-color: #FFF; -fx-border-radius: 4px; -fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0 ,0.15), 6.0, 0.7, 0.0,1.5); -fx-padding: 8px; -fx-background-radius: 5px;">
+                     <children>
+                        <Pane layoutX="11.0" layoutY="13.0" prefHeight="41.0" prefWidth="44.0" style="-fx-background-color: #489EE7; -fx-border-radius: 2px;">
+                           <children>
+                              <FontAwesomeIconView fill="WHITE" glyphName="USER" layoutX="12.0" layoutY="28.0" size="25.0" wrappingWidth="19.99998089671135" />
+                           </children>
+                        </Pane>
+                        <TextField fx:id="customer" editable="false" layoutX="55.0" layoutY="13.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="41.0" prefWidth="244.0" style="-fx-text-fill: #CDCDCD;" text="Type customer name ...">
+                           <font>
+                              <Font name="Roboto Medium" size="14.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </AnchorPane>
+                  <JFXButton ellipsisString="" layoutX="74.0" layoutY="23.0" prefHeight="31.0" prefWidth="123.0" style="-fx-border-color: #FFCD90; -fx-background-radius: 4px; -fx-border-radius: 4px; -fx-background-color: #FFF0DD;" text="Suspend Sale" textFill="#feae4e" />
+                  <JFXButton ellipsisString="" layoutX="210.0" layoutY="23.0" prefHeight="31.0" prefWidth="123.0" style="-fx-border-color: #FFA8A8; -fx-background-radius: 4px; -fx-border-radius: 4px; -fx-background-color: #FFEAEA;" text="Cancel Sale" textFill="#ff7498" />
+                  <FontAwesomeIconView fill="#feae4e" glyphName="PAUSE" layoutX="80.0" layoutY="45.0" size="15.0" />
+                  <FontAwesomeIconView fill="#ff7474" glyphName="TIMES" layoutX="221.0" layoutY="43.0" size="15.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="8.0" layoutY="180.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="424.0" prefWidth="345.0" style="-fx-background-color: #FFF; -fx-border-radius: 4px; -fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0 ,0.15), 6.0, 0.7, 0.0,1.5); -fx-padding: 8px; -fx-background-radius: 5px;">
+               <children>
+                  <Label layoutX="32.0" layoutY="15.0" text="Discount Given">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Separator layoutX="14.0" layoutY="41.0" opacity="0.39" prefHeight="12.0" prefWidth="307.0" />
+                  <Separator layoutX="20.0" layoutY="83.0" opacity="0.38" prefHeight="12.0" prefWidth="307.0" />
+                  <Label layoutX="32.0" layoutY="53.0" text="Discount Entire Sale">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Separator layoutX="20.0" layoutY="127.0" opacity="0.39" prefHeight="12.0" prefWidth="307.0" />
+                  <Label layoutX="32.0" layoutY="95.0" text="Sub-Total">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="sub_total" layoutX="245.0" layoutY="98.0" prefHeight="20.0" prefWidth="85.0" text="Ksh: 142 . 50" textFill="#0d0d0d" />
+                  <TextField fx:id="disc_g" layoutX="251.0" layoutY="13.0" prefHeight="25.0" prefWidth="72.0" promptText="0.00" style="-fx-border-color: #E45278; -fx-border-radius: 4px; -fx-background-color: #FFEAEA;" />
+                  <TextField fx:id="disc_a" layoutX="251.0" layoutY="53.0" prefHeight="25.0" prefWidth="72.0" promptText="0.00" style="-fx-border-color: #E45278; -fx-border-radius: 4px; -fx-background-color: #FFEAEA;" />
+                  <Label layoutX="32.0" layoutY="139.0" style="-fx-font-weight: bold;" text="Total">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="209.0" layoutY="139.0" style="-fx-font-weight: bold;" text="Amount Due">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="label_totalFx" layoutX="56.0" layoutY="166.0" prefHeight="20.0" prefWidth="72.0" style="-fx-font-weight: bold; -fx-font-size: 15px;" text=" 142 . 50" textFill="#6fd651" />
+                  <Label fx:id="total1" layoutX="248.0" layoutY="166.0" prefHeight="20.0" prefWidth="79.0" style="-fx-font-weight: bold; -fx-font-size: 15px;" text="142 . 50" textFill="#ff9e28" />
+                  <Separator layoutX="165.0" layoutY="139.0" orientation="VERTICAL" prefHeight="52.0" prefWidth="12.0" />
+                  <Separator layoutX="24.0" layoutY="191.0" opacity="0.39" prefHeight="12.0" prefWidth="307.0" />
+                  <FontAwesomeIconView fill="#6fd651" glyphName="DOLLAR" layoutX="45.0" layoutY="181.0" size="15.0" />
+                  <FontAwesomeIconView fill="#ff9e28" glyphName="DOLLAR" layoutX="231.0" layoutY="180.0" size="15.0" />
+                  <JFXButton fx:id="cashFx" layoutX="36.0" layoutY="244.0" prefHeight="31.0" prefWidth="72.0" style="-fx-background-color: #489EE7;" text="Cash" textFill="WHITE" />
+                  <Label layoutX="24.0" layoutY="212.0" text="Add Payment">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <JFXButton layoutX="138.0" layoutY="244.0" prefHeight="31.0" prefWidth="72.0" style="-fx-background-color: #F9FBFC; -fx-border-color: #D7DCE5; -fx-background-radius: 4px; -fx-border-radius: 4px;" text="M-Pesa" textFill="#0a0f11" />
+                  <JFXButton layoutX="240.0" layoutY="244.0" prefHeight="31.0" prefWidth="72.0" style="-fx-background-color: #F9FBFC; -fx-border-color: #D7DCE5; -fx-border-radius: 4px; -fx-background-radius: 4px;" text="Card" textFill="#0a0f11" />
+                  <TextField fx:id="amount_r" editable="false" layoutX="16.0" layoutY="325.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyReleased="#takeAmount" prefHeight="41.0" prefWidth="183.0" promptText="0.00">
+                     <font>
+                        <Font name="Roboto Medium" size="14.0" />
+                     </font>
+                  </TextField>
+                  <JFXButton ellipsisString="" layoutX="199.0" layoutY="325.0" onAction="#print" prefHeight="41.0" prefWidth="129.0" style="-fx-border-color: #FFCD90; -fx-background-radius: 4px; -fx-border-radius: 4px; -fx-background-color: #489EE7;" text="Complete Sale" textFill="WHITE" />
+                  <FontAwesomeIconView fill="WHITE" glyphName="FORWARD" layoutX="203.0" layoutY="350.0" size="15.0" />
+                  <Separator layoutX="18.0" layoutY="374.0" opacity="0.39" prefHeight="12.0" prefWidth="307.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="salesAnchor" layoutX="11.0" layoutY="167.0" prefHeight="507.0" prefWidth="921.0" style="-fx-background-color: #D1D6CF; -fx-border-color: #3C8DBC; -fx-background-radius: 3; -fx-border-width: 1 1 1 1; -fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0, 0.15), 6.0, 0.7, 0.0,1.5); -fx-padding: 4;">
+         <children>
+            <ScrollPane fx:id="scrollFx" layoutX="30.0" layoutY="14.0" prefHeight="326.0" prefWidth="901.0" AnchorPane.bottomAnchor="177.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="14.0">
+               <content>
+                  <TilePane fx:id="tilepanefx" prefHeight="290.0" prefWidth="896.0">
+                     <children>
+                        <TableView fx:id="table_orders" prefHeight="288.0" prefWidth="881.0">
+                          <columns>
+                            <TableColumn fx:id="itemidFx" prefWidth="60.0" text="item_id" />
+                            <TableColumn fx:id="itemnameFx" prefWidth="300.0" text="Item Name" />
+                              <TableColumn fx:id="quantityFx" prefWidth="150.0" text="Quantity" />
+                              <TableColumn fx:id="pricefx" prefWidth="150.0" text="Price" />
+                              <TableColumn fx:id="totalFx" prefWidth="150.0" text="Total" />
+                          </columns>
+                        </TableView>
+                     </children></TilePane>
+               </content>
+            </ScrollPane>
+            <AnchorPane layoutX="16.0" layoutY="346.0" prefHeight="139.0" prefWidth="891.0" style="-fx-background-color: #fff; -fx-border-radius: 4px; -fx-effect: dropshadow(gaussian, rgb(0.0, 0.0, 0.0 ,0.15), 6.0, 0.7, 0.0,1.5); -fx-background-radius: 5px; -fx-padding: 8px;">
+               <children>
+                  <Label layoutX="21.0" layoutY="14.0" style="-fx-text-fill: #489EE7;" text="Update Product">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="prod_name" layoutX="21.0" layoutY="49.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="41.0" prefWidth="222.0" promptText="Product name" style="-fx-text-fill: #011800; -fx-border-color: #489EE7;">
+                     <font>
+                        <Font name="Roboto Medium" size="14.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="price" layoutX="289.0" layoutY="49.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mouseTransparent="true" prefHeight="41.0" prefWidth="98.0" promptText="Price" style="-fx-text-fill: #011800; -fx-border-color: #489EE7;">
+                     <font>
+                        <Font name="Roboto Medium" size="14.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="qty" layoutX="498.0" layoutY="49.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mouseTransparent="true" prefHeight="41.0" prefWidth="52.0" promptText="Qty" style="-fx-text-fill: #011800; -fx-border-color: #489EE7; -fx-border-radius: 4px;">
+                     <font>
+                        <Font name="Roboto Medium" size="14.0" />
+                     </font>
+                  </TextField>
+                  <JFXButton fx:id="Addup" layoutX="454.0" layoutY="49.0" prefHeight="41.0" prefWidth="44.0" style="-fx-background-color: #FFF0DD; -fx-background-radius: 4px; -fx-border-radius: 4px; -fx-border-color: #FFCD90;" text="." textFill="WHITE" />
+                  <FontAwesomeIconView fill="#feae4e" glyphName="PLUS" layoutX="470.0" layoutY="74.0" size="15.0" />
+                  <JFXButton fx:id="Adddown" layoutX="550.0" layoutY="48.0" prefHeight="41.0" prefWidth="44.0" style="-fx-background-color: #FFEAEA; -fx-background-radius: 4px; -fx-border-radius: 4px; -fx-border-color: #E45278;" text="." textFill="#ff7498" />
+                  <FontAwesomeIconView fill="#ff7474" glyphName="MINUS" layoutX="566.0" layoutY="74.0" size="15.0" />
+                  <JFXButton fx:id="updateFx" layoutX="649.0" layoutY="14.0" onAction="#update" prefHeight="41.0" prefWidth="123.0" style="-fx-background-color: #AADD5E; -fx-background-radius: 4px; -fx-border-radius: 4px; -fx-border-color: #AADD5E;" text="Update " textFill="WHITE" />
+                  <JFXButton fx:id="deleteFx" layoutX="649.0" layoutY="76.0" onAction="#delete" prefHeight="41.0" prefWidth="123.0" style="-fx-background-color: #E45278; -fx-background-radius: 4px; -fx-border-radius: 4px; -fx-border-color: #E45278;" text="Delete" textFill="WHITE" />
+                  <FontAwesomeIconView fill="WHITE" glyphName="EDIT" layoutX="664.0" layoutY="39.0" size="15.0" />
+                  <FontAwesomeIconView fill="WHITE" glyphName="TRASH" layoutX="660.0" layoutY="101.0" size="15.0" />
+                  <Separator layoutX="619.0" layoutY="7.0" orientation="VERTICAL" prefHeight="113.0" prefWidth="12.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
